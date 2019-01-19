@@ -10,13 +10,14 @@
     box-shadow: 0 2px 4px rgba(0,0,0,.5);
     z-index: 5;
     background: #202124;
-    transition: top .3s ease;
+    font-size: 22px;    
 }
 
 .title > div{
     display: inline-block;
     position: absolute;
     line-height: 55px;
+    cursor: pointer;
 }
 
 .left{
