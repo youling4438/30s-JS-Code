@@ -1,0 +1,36 @@
+
+.title{
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 55px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,.5);
+    z-index: 5;
+    background: #202124;
+    transition: top .3s ease;
+}
+
+.title > div{
+    display: inline-block;
+    position: absolute;
+    line-height: 55px;
+}
+
+.left{
+    left: 0;
+    padding-left: 20px;
+    letter-spacing: 10px; 
+}
+
+.center{
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.right{
+    right: 0;
+    padding-right: 20px;
+}
