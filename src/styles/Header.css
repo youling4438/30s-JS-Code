@@ -31,7 +31,17 @@
     transform: translateX(-50%);
 }
 
+.center > img {
+    width: 55px;
+    vertical-align:  -20px;
+}
+
 .right{
     right: 0;
     padding-right: 20px;
+}
+
+.right img {
+    width: 40px;
+    transform: rotate(45deg) translateX(15px);
 }
