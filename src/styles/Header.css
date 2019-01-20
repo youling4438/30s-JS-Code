@@ -1,5 +1,5 @@
 
-.title{
+.title {
     box-sizing: border-box;
     overflow: hidden;
     height: 55px;
@@ -13,20 +13,24 @@
     font-size: 22px;    
 }
 
-.title > div{
+.title > div {
     display: inline-block;
     position: absolute;
     line-height: 55px;
     cursor: pointer;
 }
 
-.left{
+.left {
     left: 0;
     padding-left: 20px;
-    letter-spacing: 10px; 
+    letter-spacing: 5px; 
 }
 
-.center{
+.left:hover {
+    background: rgba(255,255,255,.2);
+}
+
+.center {
     left: 50%;
     transform: translateX(-50%);
 }
@@ -36,7 +40,7 @@
     vertical-align:  -20px;
 }
 
-.right{
+.right {
     right: 0;
     padding-right: 20px;
 }
