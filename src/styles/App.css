@@ -1,11 +1,12 @@
 /* Base Application Styles */
+
 body {
-	color: #fff;
-	background: #eee;
+    color: #fff;
+    background: #eee;
 }
 
 .index {
-	margin-top: 60px;
+    margin-top: 60px;
 }
 
 /* .index img {
@@ -16,10 +17,51 @@ body {
 } */
 
 .index .notice {
-  margin: 20px auto;
-  padding: 15px 0;
-  text-align: center;
-  border: 1px solid #000;
-  border-width: 1px 0;
-  background: #666;
+    margin: 20px auto;
+    padding: 15px 0;
+    text-align: center;
+    border: 1px solid #000;
+    border-width: 1px 0;
+    background: #666;
+}
+
+.category-name {
+    text-align: center;
+    color: #212121;
+    font-size: 45px;
+}
+
+.codeCard {
+    color: #212121;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 80vw;
+    margin: 35px auto;
+    padding: 10px 0 0;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12), 0 1px 5px 0 rgba(0, 0, 0, .2);
+}
+
+.fnName {
+    font-size: 30px;
+    text-align: center;
+    padding: 0 50px 10px;
+}
+
+.fnDescription {
+    width: calc(100% - 100px);
+    margin: 20px auto;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-family: Helvetica, sans-serif;
+    line-height: 2;
+}
+
+.fnCode {
+    padding: 5px 50px 0;
+    background: #263238;
+    color: #eee;
+    width: calc(100% - 100px);
 }
