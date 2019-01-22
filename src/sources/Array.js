@@ -64,6 +64,28 @@ export default {
             fnExampleCode: [
                 'deepFlatten([1, [2], [[3], 4], 5]); // [1,2,3,4,5]'
             ]
+        },
+        {
+            fnName: 'difference',
+            fnDescription: `Returns the difference between two arrays.
+                Create a Set from b, then use Array.prototype.filter() on a to only keep values not contained in b.`,
+            fnCode: `const difference = (a, b) => {
+                const s = new Set(b);
+                return a.filter(x => !s.has(x));
+              };`,
+            fnExampleCode: [
+                'difference([1, 2, 3], [1, 2, 4]); // [3]'
+            ]
+        },
+        {
+            fnName: 'indexOfAll',
+            fnDescription: `Returns all indices of val in an array. If val never occurs, returns [].
+                Use Array.prototype.reduce() to loop over elements and store indices for matching elements. Return the array of indices.`,
+            fnCode: 'const indexOfAll = (arr, val) => arr.reduce((acc, el, i) => (el === val ? [...acc, i] : acc), []);',
+            fnExampleCode: [
+                'indexOfAll([1, 2, 3, 1, 2, 3], 1); // [0,3]',
+                'indexOfAll([1, 2, 3], 4); // []'
+            ]
         }
     ]
 }
