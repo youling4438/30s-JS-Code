@@ -1,14 +1,16 @@
+require('styles/CodeCard.css');
+
 import React from 'react';
 
 class CodeCardComponent extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
 
     }
     render() {
         const { fnData } = this.props;
         const { fnName, fnDescription, fnCode, fnExampleCode } = fnData;
-        const fnExampleCodeList = fnExampleCode.map((item)=><p>{item}</p>);
+        const fnExampleCodeList = fnExampleCode.map((item) => <p>{item}</p>);
         return (
             <div className="codeCard">
                 <div className="fnName">{fnName}</div>
