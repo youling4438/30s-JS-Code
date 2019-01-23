@@ -10,7 +10,7 @@ class CodeCardComponent extends React.Component {
     render() {
         const { fnData } = this.props;
         const { fnName, fnDescription, fnCode, fnExampleCode } = fnData;
-        const fnExampleCodeList = fnExampleCode.map((item) => <p>{item}</p>);
+        const fnExampleCodeList = fnExampleCode.map((item, index) => <p key={index}>{item}</p>);
         return (
             <div className="codeCard">
                 <div className="fnName">{fnName}</div>

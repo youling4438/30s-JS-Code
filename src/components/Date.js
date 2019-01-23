@@ -5,7 +5,7 @@ import DateData from '../sources/Date'
 class DateComponent extends React.Component {
     render() {
         const fnlist = DateData.fnlist;
-        const fnListDom = fnlist.map(item => <CodeCard fnData={item} />);
+        const fnListDom = fnlist.map(item => <CodeCard key={item.fnName} fnData={item} />);
         return (
             <div className="container">
                 <div className="category-name">Date</div>
