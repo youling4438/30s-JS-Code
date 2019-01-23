@@ -4,6 +4,7 @@ require('styles/App.css');
 import React from 'react';
 import Header from './Header';
 import Array from './Array';
+import Date from './Date';
 
 class AppComponent extends React.Component {
 	render() {
@@ -11,7 +12,8 @@ class AppComponent extends React.Component {
 			<div className="index">
 				<Header />
 				<Array />
-                <div className="notice">Please edit <code>src/components/Main.js</code> to get started!</div>
+				<Date />
+				<div className="notice">Please edit <code>src/components/Main.js</code> to get started!</div>
 			</div>
 		);
 	}
