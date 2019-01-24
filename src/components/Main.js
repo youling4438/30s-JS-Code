@@ -5,6 +5,7 @@ import React from 'react';
 import Header from './Header';
 import Array from './Array';
 import Date from './Date';
+import ButtonGroup from './ButtonGroup';
 
 class AppComponent extends React.Component {
 	constructor(props) {
@@ -36,6 +37,9 @@ class AppComponent extends React.Component {
 					<button onClick={() => this.buttonClickHandle('Array')}>Array</button>
 					<button onClick={() => this.buttonClickHandle('Date')}>Date</button>
 				</div>
+				<ButtonGroup
+					buttonClickHandle={this.buttonClickHandle}
+				/>
 				<div className="notice">Please edit <code>src/components/Main.js</code> to get started!</div>
 			</div>
 		);
