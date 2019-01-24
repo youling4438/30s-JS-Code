@@ -33,10 +33,6 @@ class AppComponent extends React.Component {
 			<div className="index">
 				<Header />
 				{showComponent}
-				<div>
-					<button onClick={() => this.buttonClickHandle('Array')}>Array</button>
-					<button onClick={() => this.buttonClickHandle('Date')}>Date</button>
-				</div>
 				<ButtonGroup
 					buttonClickHandle={this.buttonClickHandle}
 				/>
