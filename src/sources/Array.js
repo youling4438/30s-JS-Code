@@ -57,8 +57,8 @@ export default {
         },
         {
             fnName: 'deepFlatten',
-            fnDescription: `Deep flattens an array. 
-                Use recursion. Use Array.prototype.concat() with an empty array ([]) and the spread operator (...) to flatten an array. 
+            fnDescription: `Deep flattens an array.
+                Use recursion. Use Array.prototype.concat() with an empty array ([]) and the spread operator (...) to flatten an array.
                 Recursively flatten each element that is an array.`,
             fnCode: 'const deepFlatten = arr => [].concat(...arr.map(v => (Array.isArray(v) ? deepFlatten(v) : v)));',
             fnExampleCode: [
