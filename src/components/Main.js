@@ -5,6 +5,7 @@ import React from 'react';
 import Header from './Header';
 import Array from './Array';
 import Date from './Date';
+import Math from './Math';
 import ButtonGroup from './ButtonGroup';
 
 class AppComponent extends React.Component {
@@ -26,7 +27,8 @@ class AppComponent extends React.Component {
 		const { showComponentName } = this.state;
 		const allComponents = {
 			'Array': <Array />,
-			'Date': <Date />
+			'Date': <Date />,
+            'Math': <Math />
 		};
 		const showComponent = allComponents[showComponentName];
 		return (
