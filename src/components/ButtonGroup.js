@@ -9,6 +9,7 @@ class ButtonGroupComponent extends React.Component {
             <div className="buttonGrounp">
                 <a className="button" onClick={() => buttonClickHandle('Array')}>Array</a>
                 <a className="button" onClick={() => buttonClickHandle('Date')}>Date</a>
+                <a className="button" onClick={() => buttonClickHandle('Math')}>Math</a>
             </div>
         );
     }
