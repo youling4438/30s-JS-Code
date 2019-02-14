@@ -42,6 +42,54 @@ export default {
                 "isArrayLike(null); // false"
             ]
         },
+        {
+            fnName: 'isPlainObject',
+            fnDescription: `Checks if the provided value is an object created by the Object constructor.
+                Check if the provided value is truthy, use typeof to check if it is an object and Object.constructor to make sure the constructor is equal to Object.`,
+            fnCode: `const isPlainObject = val => !!val && typeof val === 'object' && val.constructor === Object;`,
+            fnExampleCode: [
+                'isPlainObject({ a: 1 }); // true',
+                'isPlainObject(new Map()); // false'
+            ]
+        },
+        {
+            fnName: 'isBoolean',
+            fnDescription: `Checks if the given argument is a native boolean element.
+                Use typeof to check if a value is classified as a boolean primitive.`,
+            fnCode: `const isBoolean = val => typeof val === 'boolean';`,
+            fnExampleCode: [
+                'isBoolean(null); // false',
+                'isBoolean(false); // true'
+            ]
+        },
+        {
+            fnName: 'isFunction',
+            fnDescription: `Checks if the given argument is a function.
+                Use typeof to check if a value is classified as a function primitive.`,
+            fnCode: `const isFunction = val => typeof val === 'function';`,
+            fnExampleCode: [
+                'isFunction("x"); // false',
+                'isFunction(x => x); // true'
+            ]
+        },
+        {
+            fnName: 'isEmpty',
+            fnDescription: `Returns true if the a value is an empty object, collection, map or set, has no enumerable properties or is any type that is not considered a collection.
+                Check if the provided value is null or if its length is equal to 0.`,
+            fnCode: `const isEmpty = val => val == null || !(Object.keys(val) || val).length;`,
+            fnExampleCode: [
+                'isEmpty(new Map()); // true',
+                'isEmpty(new Set()); // true',
+                'isEmpty([]); // true',
+                'isEmpty({}); // true',
+                'isEmpty(""); // true',
+                'isEmpty([1, 2]); // false',
+                'isEmpty({ a: 1, b: 2 }); // false',
+                'isEmpty("text"); // false',
+                'isEmpty(123); // true - type is not considered a collection',
+                'isEmpty(true); // true - type is not considered a collection',
+            ]
+        },
 
     ]
 }
