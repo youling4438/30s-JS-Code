@@ -6,6 +6,7 @@ import Header from './Header';
 import Array from './Array';
 import Date from './Date';
 import Math from './Math';
+import Type from './Type';
 import ButtonGroup from './ButtonGroup';
 
 class AppComponent extends React.Component {
@@ -28,7 +29,8 @@ class AppComponent extends React.Component {
 		const allComponents = {
 			'Array': <Array />,
 			'Date': <Date />,
-            'Math': <Math />
+            'Math': <Math />,
+            'Type': <Type />
 		};
 		const showComponent = allComponents[showComponentName];
 		return (
