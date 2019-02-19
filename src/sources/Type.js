@@ -87,7 +87,7 @@ export default {
                 'isEmpty({ a: 1, b: 2 }); // false',
                 'isEmpty("text"); // false',
                 'isEmpty(123); // true - type is not considered a collection',
-                'isEmpty(true); // true - type is not considered a collection',
+                'isEmpty(true); // true - type is not considered a collection'
             ]
         },
         {
@@ -100,6 +100,32 @@ export default {
                 'isNumber(1); // true'
             ]
         },
+        {
+            fnName: 'isObject',
+            fnDescription: `eturns a boolean determining if the passed value is an object or not.
+                Uses the Object constructor to create an object wrapper for the given value. If the value is null or undefined, create and return an empty object. Οtherwise, return an object of a type that corresponds to the given value.`,
+            fnCode: `const isObject = obj => obj === Object(obj);`,
+            fnExampleCode: [
+                'isObject([1, 2, 3, 4]); // true',
+                'isObject([]); // true',
+                'isObject(["Hello!"]); // true',
+                'isObject({ a: 1 }); // true',
+                'isObject({}); // true',
+                'isObject(true); // false'
+            ]
+        },
+        {
+            fnName: 'isObjectLike',
+            fnDescription: `Checks if a value is object-like.
+                Check if the provided value is not null and its typeof is equal to 'object'.`,
+            fnCode: `const isObjectLike = val => val !== null && typeof val === 'object';`,
+            fnExampleCode: [
+                'isObjectLike({}); // true',
+                'isObjectLike([1, 2, 3]); // true',
+                'isObjectLike(x => x); // false',
+                'isObjectLike(null); // false'
+            ]
+        }
 
     ]
 }
