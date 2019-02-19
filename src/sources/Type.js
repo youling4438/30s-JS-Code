@@ -90,6 +90,16 @@ export default {
                 'isEmpty(true); // true - type is not considered a collection',
             ]
         },
+        {
+            fnName: 'isNumber',
+            fnDescription: `RChecks if the given argument is a number.
+                Use typeof to check if a value is classified as a number primitive.`,
+            fnCode: `const isNumber = val => typeof val === 'number';`,
+            fnExampleCode: [
+                'isNumber("1"); // false',
+                'isNumber(1); // true'
+            ]
+        },
 
     ]
 }
