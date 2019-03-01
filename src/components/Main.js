@@ -7,6 +7,8 @@ import Array from './Array';
 import Date from './Date';
 import Math from './Math';
 import Type from './Type';
+import Node from './Node';
+import ObjectComponent from './Object';
 import ButtonGroup from './ButtonGroup';
 
 class AppComponent extends React.Component {
@@ -30,9 +32,11 @@ class AppComponent extends React.Component {
 			'Array': <Array />,
 			'Date': <Date />,
             'Math': <Math />,
-            'Type': <Type />
+            'Type': <Type />,
+            'Object': <ObjectComponent />,
+            'Node': <Node />
 		};
-		const showComponent = allComponents[showComponentName];
+        const showComponent = allComponents[showComponentName];
 		return (
 			<div className="index">
 				<Header />
