@@ -14,7 +14,7 @@ export default {
             fnName: 'is',
             fnDescription: `Checks if the provided value is of the specified type.
                 Ensure the value is not undefined or null using Array.prototype.includes(), and compare the constructor property on the value with type to check if the provided value is of the specified type.`,
-            fnCode: `const is = (type, val) => ![, null].includes(val) && val.constructor === type;`,
+            fnCode: 'const is = (type, val) => ![, null].includes(val) && val.constructor === type;',
             fnExampleCode: [
                 'is(Array, [1]); // true',
                 'is(ArrayBuffer, new ArrayBuffer()); // true',
@@ -35,18 +35,18 @@ export default {
             fnName: 'isArrayLike',
             fnDescription: `Checks if the provided argument is array-like (i.e. is iterable).
                 Check if the provided argument is not null and that its Symbol.iterator property is a function.`,
-            fnCode: `const isArrayLike = obj => obj != null && typeof obj[Symbol.iterator] === 'function';`,
+            fnCode: 'const isArrayLike = obj => obj != null && typeof obj[Symbol.iterator] === \'function\';',
             fnExampleCode: [
-                "isArrayLike(document.querySelectorAll('.className')); // true",
-                "isArrayLike('abc'); // true",
-                "isArrayLike(null); // false"
+                'isArrayLike(document.querySelectorAll(\'.className\')); // true',
+                'isArrayLike(\'abc\'); // true',
+                'isArrayLike(null); // false'
             ]
         },
         {
             fnName: 'isPlainObject',
             fnDescription: `Checks if the provided value is an object created by the Object constructor.
                 Check if the provided value is truthy, use typeof to check if it is an object and Object.constructor to make sure the constructor is equal to Object.`,
-            fnCode: `const isPlainObject = val => !!val && typeof val === 'object' && val.constructor === Object;`,
+            fnCode: 'const isPlainObject = val => !!val && typeof val === \'object\' && val.constructor === Object;',
             fnExampleCode: [
                 'isPlainObject({ a: 1 }); // true',
                 'isPlainObject(new Map()); // false'
@@ -56,7 +56,7 @@ export default {
             fnName: 'isBoolean',
             fnDescription: `Checks if the given argument is a native boolean element.
                 Use typeof to check if a value is classified as a boolean primitive.`,
-            fnCode: `const isBoolean = val => typeof val === 'boolean';`,
+            fnCode: 'const isBoolean = val => typeof val === \'boolean\';',
             fnExampleCode: [
                 'isBoolean(null); // false',
                 'isBoolean(false); // true'
@@ -66,7 +66,7 @@ export default {
             fnName: 'isFunction',
             fnDescription: `Checks if the given argument is a function.
                 Use typeof to check if a value is classified as a function primitive.`,
-            fnCode: `const isFunction = val => typeof val === 'function';`,
+            fnCode: 'const isFunction = val => typeof val === \'function\';',
             fnExampleCode: [
                 'isFunction("x"); // false',
                 'isFunction(x => x); // true'
@@ -76,7 +76,7 @@ export default {
             fnName: 'isEmpty',
             fnDescription: `Returns true if the a value is an empty object, collection, map or set, has no enumerable properties or is any type that is not considered a collection.
                 Check if the provided value is null or if its length is equal to 0.`,
-            fnCode: `const isEmpty = val => val == null || !(Object.keys(val) || val).length;`,
+            fnCode: 'const isEmpty = val => val == null || !(Object.keys(val) || val).length;',
             fnExampleCode: [
                 'isEmpty(new Map()); // true',
                 'isEmpty(new Set()); // true',
@@ -94,7 +94,7 @@ export default {
             fnName: 'isNumber',
             fnDescription: `RChecks if the given argument is a number.
                 Use typeof to check if a value is classified as a number primitive.`,
-            fnCode: `const isNumber = val => typeof val === 'number';`,
+            fnCode: 'const isNumber = val => typeof val === \'number\';',
             fnExampleCode: [
                 'isNumber("1"); // false',
                 'isNumber(1); // true'
@@ -104,7 +104,7 @@ export default {
             fnName: 'isObject',
             fnDescription: `eturns a boolean determining if the passed value is an object or not.
                 Uses the Object constructor to create an object wrapper for the given value. If the value is null or undefined, create and return an empty object. Οtherwise, return an object of a type that corresponds to the given value.`,
-            fnCode: `const isObject = obj => obj === Object(obj);`,
+            fnCode: 'const isObject = obj => obj === Object(obj);',
             fnExampleCode: [
                 'isObject([1, 2, 3, 4]); // true',
                 'isObject([]); // true',
@@ -118,14 +118,40 @@ export default {
             fnName: 'isObjectLike',
             fnDescription: `Checks if a value is object-like.
                 Check if the provided value is not null and its typeof is equal to 'object'.`,
-            fnCode: `const isObjectLike = val => val !== null && typeof val === 'object';`,
+            fnCode: 'const isObjectLike = val => val !== null && typeof val === \'object\';',
             fnExampleCode: [
                 'isObjectLike({}); // true',
                 'isObjectLike([1, 2, 3]); // true',
                 'isObjectLike(x => x); // false',
                 'isObjectLike(null); // false'
             ]
+        },
+        {
+            fnName: 'isString',
+            fnDescription: `Checks if the given argument is a string. Only works for string primitives.
+                Use typeof to check if a value is classified as a string primitive.`,
+            fnCode: 'const isString = val => typeof val === "string";',
+            fnExampleCode: [
+                'isString("10"); // true'
+            ]
+        },
+        {
+            fnName: 'isSymbol',
+            fnDescription: `Checks if the given argument is a symbol.
+                Use typeof to check if a value is classified as a symbol primitive.`,
+            fnCode: 'const isSymbol = val => typeof val === "symbol";',
+            fnExampleCode: [
+                'isSymbol(Symbol("x")); // true'
+            ]
+        },
+        {
+            fnName: 'isUndefined',
+            fnDescription: `Returns true if the specified value is undefined, false otherwise.
+                Use the strict equality operator to check if the value and of val are equal to undefined.`,
+            fnCode: 'const isUndefined = val => typeof val === undefined;',
+            fnExampleCode: [
+                'isUndefined(undefined); // true'
+            ]
         }
-
     ]
 }
