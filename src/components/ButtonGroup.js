@@ -11,6 +11,8 @@ class ButtonGroupComponent extends React.Component {
                 <a className="button" onClick={() => buttonClickHandle('Date')}>Date</a>
                 <a className="button" onClick={() => buttonClickHandle('Math')}>Math</a>
                 <a className="button" onClick={() => buttonClickHandle('Type')}>Type</a>
+                <a className="button" onClick={() => buttonClickHandle('Object')}>Object</a>
+                <a className="button" onClick={() => buttonClickHandle('Node')}>Node</a>
             </div>
         );
     }
